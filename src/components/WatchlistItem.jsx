@@ -8,7 +8,7 @@ import { formatDate, formatRuntime } from '../utils/format.js';
 const NOTE_MAX = 120;
 
 export default function WatchlistItem({ item, onUpdate, onRemove, layout = 'grid' }) {
-  const [note, setNote] = useState(item.note); // form state (controlled)
+  const [note, setNote] = useState(item.note); 
   const tooLong = note.length > NOTE_MAX;
 
   const saveNote = () => { if (!tooLong) onUpdate(item.id, { note: note.trim() }); };

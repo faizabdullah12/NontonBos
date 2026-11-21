@@ -3,7 +3,6 @@ import { useLocalStorage } from '../hooks/useLocalStorage.js';
 
 const WatchlistContext = createContext(null);
 
-// Global state (Context API): daftar tontonan, tersimpan di localStorage
 export function WatchlistProvider({ children }) {
   const [items, setItems] = useLocalStorage('nontonbos.watchlist', []);
 

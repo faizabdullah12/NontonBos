@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useDebounce } from '../hooks/useDebounce.js';
 
-// Input pencarian ter-debounce. Nilai awal dari URL, perubahan dikirim lewat onSearch
+
 export default function SearchBar({ value, onSearch, placeholder = 'Cari judul…', className = '' }) {
   const [text, setText] = useState(value);
   const debounced = useDebounce(text, 450);
 
   useEffect(() => setText(value), [value]);
-  useEffect(() => { if (debounced !== value) onSearch(debounced); /* eslint-disable-next-line */ }, [debounced]);
+  useEffect(() => { if (debounced !== value) onSearch(debounced);}, [debounced]);
 
   return (
     <div className={`relative flex items-center ${className}`}>

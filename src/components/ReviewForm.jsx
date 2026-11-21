@@ -5,7 +5,6 @@ import { validateReview } from '../utils/validators.js';
 
 const EMPTY = { author: '', rating: 0, text: '', spoiler: false };
 
-// Form dengan controlled components + validasi (saat blur & saat submit)
 export default function ReviewForm({ shows, initialShowId = '', onSubmit }) {
   const [values, setValues] = useState({ ...EMPTY, showId: initialShowId });
   const [touched, setTouched] = useState({});

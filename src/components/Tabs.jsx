@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-// Tab untuk nested route (setiap tab = URL berbeda)
+
 export default function Tabs({ tabs }) {
   return (
     <div className="flex gap-space-xs overflow-x-auto rounded-xl bg-surface-container-low p-1.5" role="tablist">

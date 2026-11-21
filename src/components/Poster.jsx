@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-// Gambar dengan fallback gradien jika tidak ada / gagal dimuat
 export default function Poster({ src, alt, className = '' }) {
   const [failed, setFailed] = useState(false);
   if (!src || failed) {

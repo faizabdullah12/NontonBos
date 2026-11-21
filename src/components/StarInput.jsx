@@ -1,4 +1,3 @@
-// Input bintang (controlled) -> dipakai di form review & watchlist
 export default function StarInput({ value, onChange, label = 'Rating' }) {
   return (
     <div role="radiogroup" aria-label={label} className="flex items-center gap-0.5">
