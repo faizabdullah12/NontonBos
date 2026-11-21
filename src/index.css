@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { margin: 0; background: #0f131c; }
+body { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; overscroll-behavior: none; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.icon-fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+::-webkit-scrollbar { height: 6px; width: 8px; }
+::-webkit-scrollbar-thumb { background: #31353e; border-radius: 9999px; }
+
+@layer components {
+  .glass { @apply bg-surface-container/60 backdrop-blur-xl border border-white/5; }
+  .input-base {
+    @apply w-full rounded-lg bg-surface-container text-on-surface placeholder:text-outline
+           px-space-md py-space-sm border border-outline-variant/40 outline-none transition
+           focus:border-[#6366F1] focus:ring-[3px] focus:ring-[#6366F1]/25;
+  }
+}
